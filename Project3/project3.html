@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Variables with Get requests</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <script>
+        let baseURL = "https://api.particle.io/v1/devices/310042001847393035313138/";
+        let token = "?access_token=d146bd53ee1a21b00637ccb83f0057373efa03ac";
+        let param1 = "pot1";
+        let param2 = "pot2";
+        let data1URL = baseURL + param1 + token;
+        let data2URL = baseURL + param2 + token;
+
+        let currentFactor, prevFactor;
+        let timeInterval = 1000;
+
+        let myHue = 0;
+        let tempResult, remainResult;
+        let waterTemp = [];
+        let waterRemain = [];
+
+        
+        function setup() {
+            createCanvas(1450, 700);
+            angleMode(DEGREES);
+            
+            currentFactor = 0;
+            prevFactor = 0;
+
+            colorMode(HSB,360,100,100,1);
+        }
+        
+        function draw() {
+            background(250);
+            currentFactor = millis() % timeInterval;
+            if(currentFactor<prevFactor){
+                loadJSON(data1URL, dataHandle);
+                loadJSON(data2URL, dataHandle);
+            }
+
+            for (let i = 0; i < waterRemain.length; i++) {
+                //changing color//
+                fill(waterTemp[i],100,100,1);
+                stroke(waterTemp[i],100,100,1);
+                strokeWeight(1);
+                rect(10 * i + 150, 600 - waterRemain[i], 10, waterRemain[i]);
+            }
+
+            prevFactor= currentFactor;
+        }
+    
+        function dataHandle(JSONdata){
+            console.log(JSONdata);
+            if(JSONdata.name === "pot1"){
+                remainResult = map(parseInt(JSONdata.result),0,4096,0,500);
+                //console.log("Remain"+ parseInt(remainResult));
+                //console.log("Remain"+ parseInt(JSONdata.result));
+                append(waterRemain, remainResult);
+                //console.log(waterRemain)
+            }
+            else if(JSONdata.name === "pot3"){
+                console.log("Temparature"+ parseInt(JSONdata.result));
+                myHue = map(parseInt(JSONdata.result),20,100,0,185);
+                append(waterTemp, myHue);
+                //console.log(waterTemp)
+                
+            }       
+        }
+    
+
+        
+    </script>
+
+</body>
+</html>
