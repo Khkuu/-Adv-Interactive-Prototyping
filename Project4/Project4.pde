@@ -23,8 +23,8 @@ void setup() {
 
 void draw() {
   background(0);
-  println("Frame Rate: " + frameRate);
-  if(weight>0){
+  //println("Frame Rate: " + frameRate);
+  if(weight>27000){
     speed = map (control, 0 , 4500, 0, 20);
   }
   
@@ -49,9 +49,7 @@ void draw() {
   for (int i =0; i< stars. length; i++) {
     stars[i].update();
     stars[i].show();
-    if (effect == 1){
-      stars[i].effect();
-    }
+    stars[i].effect();
   }
   
 }
@@ -63,14 +61,14 @@ void serialEvent(Serial conn) {
     fromSerial = trim(fromSerial);
     
     String[] data = split (fromSerial , ',');
-    //printArray(data);
+    printArray(data);
     
-    if(data.length == 5 ){
-      effect = float(data[0]);
-      control = float(data[1]);
-      turnl = float(data[2]);
-      turnr = float(data[3]);
-      weight = float(data[4]);
+    if(data.length == 4 ){
+      //effect = float(data[0]);
+      control = float(data[0]);
+      turnl = float(data[1]);
+      turnr = float(data[2]);
+      weight = float(data[3]);
     }
     
   }
