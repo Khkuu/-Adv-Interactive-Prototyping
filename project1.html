@@ -36,7 +36,7 @@
     <header class="sticky-top py-1 nav_header">
       <nav class="container d-flex flex-column flex-md-row justify-content-between">
         <a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
-        <a class="py-2 d-none d-md-inline-block" href="project1.html">Project 1</a>
+        <a class="py-2 d-none d-md-inline-block" href="project1.html" style="color:white;">Project 1</a>
         <a class="py-2 d-none d-md-inline-block" href="project2.html">Project 2</a>
         <a class="py-2 d-none d-md-inline-block" href="project3.html">Project 3</a>
         <a class="py-2 d-none d-md-inline-block" href="project4.html">Project 4</a>
@@ -46,17 +46,34 @@
     
     <main>
       <body>
-        <div class="tree-hero">The cycle of life</div>
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <img src="Project1/Final_tree.png" class="img-fluid">
+        <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
           <div class="col-md-8 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 fw-normal mb-5">The cycle of life</h1>
-            <p class=" fw-normal mb-5">When I read the description of the home work "Come up with a natural system you'd like to represent in code”, I thought about what is the most natural phenomenon in this world. In my opinion, it is the cycle of life, it is the birth, growth, maturity to old age. No natural creature escapes such a law, nor man, nor trees. I have read about recursive coding before, and I would like to take this opportunity to try to apply this code, so I finally decided to represent the process of trees growing in all seasons in code.</p>
-            <p class=" fw-normal mb-5">At first, I wanted to focus on autumn because I can code the recursive tree and has some interactive leaves. At this stage, I didn't have a lot of ideas about interaction, but simply wanted to control the direction with the mouse. So I just made the following diagram. </p>
+            <p class="display-4 mb-5 fw-bold">The cycle of life</p>
+            <p class="text-start mb-3 fw-bold fs-4">Background</p>
+            <p class=" text-start mb-5">When I read the description of the home work "Come up with a natural system you'd like to represent in code”, I thought about what is the most natural phenomenon in this world. In my opinion, it is the cycle of life, it is the birth, growth, maturity to old age. No natural creature escapes such a law, nor man, nor trees. I have read about recursive coding before, and I would like to take this opportunity to try to apply this code, so I finally decided to represent the process of trees growing in all seasons in code.</p>
+            <p class="text-start mb-3 fw-bold fs-4">Diagram(original version)</p>
+            <p class="text-start mb-4">At first, I wanted to focus on autumn because I can code the recursive tree and has some interactive leaves. At this stage, I didn't have a lot of ideas about interaction, but simply wanted to control the direction with the mouse. So I just made the following diagram. </p>
             <img class="full mb-5" src="Project1/version1.jpg">
-            <p class=" fw-normal mb-5">But after the first week of critique, I gained a lot of interesting interaction ideas. I plan to change the season by clicking the mouse and control the speed and direction of the wind with the position of the mouse. So I got a second version of the diagram. </p>
+            <p class="text-start mb-3 fw-bold fs-4">Diagram(revised version)</p>
+            <p class="text-start mb-4">But after the first week of critique, I gained a lot of interesting interaction ideas. I plan to change the season by clicking the mouse and control the speed and direction of the wind with the position of the mouse. So I got a second version of the diagram. </p>
             <img class="full mb-5" src="Project1/version2.jpg">
-            <p class=" fw-normal mb-5">The process of making the diagram was also the process that helped me organize the structure of the code. In the diagram I have listed the elements that should appear in the picture, they include the background, the tree and the leaves. Among them, the writing of the trees and the interaction of the leaves were two difficult points. Therefore, I plan to start with these two aspects. Also, to save time, at the beginning I made it in black and white colors and graphics. By studying the teacher's demos and online examples, I extracted the logic I could use and modified it to finally achieve the initial interaction. </p>
-            <p class=" fw-normal mb-5">The next week, with the help of the professor, I was able to fully implement the interaction. So I started to modify the visuals, adding colors to the background, trees and leaves. Finally finished the project. </p>
+            <p class="text-start mb-3 fw-bold fs-4">Coding process </p>
+            <p class=" text-start mb-3">In the process, making the diagram helped me a lot to deal with the complexity and have a deeper understanding of the structure of the code. In the diagram, I listed the elements that should appear in the picture: the background, the tree, and the leaves. In this way, I split the code into three sections: the main section, the leave section, and the tree section.</p>
+            <p class=" text-start mb-3">The other way to deal with the complexity is to simplify the code at first to focus on the function.  In the beginning, I made my code in black and white colors and graphics and after I figured out how to make it functional, I add the visual on that base. </p>
+            <p class=" text-start mb-4">By studying the teacher's demos and online examples, I finally achieve the initial interaction, and here is my final code.</p>
+            <div class="row align-items-start mb-5">
+              <div class="col">
+                <img class="full" src="Project1/Code1.jpg">
+              </div>
+              <div class="col">
+                <img class="full" src="Project1/Code2.jpg">
+              </div>
+              <div class="col">
+                <img class="full" src="Project1/Code3.jpg">
+              </div>
+            </div>
+            <p class="text-start mb-3 fw-bold fs-4">Final look </p>
             <video width="780" height="400" controls>
               <source src="Project1/final.mov" type=video/ogg>
           </div>

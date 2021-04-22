@@ -1,10 +1,175 @@
 <!DOCTYPE html>
- <html>
- <head>
-   <title>Hello Web - Processing.js Test</title>
-   <script type="text/javascript" src="processing.js"></script>
- </head>
- <body>
-  <canvas data-processing-sources="Project4.pde"></canvas>
-</body>
-</html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.80.0">
+        <title>Ning Zheng</title>
+    
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        </style>
+
+        <link rel="stylesheet" href="style.css" />
+
+      </head>
+      <body>
+        
+    <header class="sticky-top py-1 nav_header">
+      <nav class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
+        <a class="py-2 d-none d-md-inline-block" href="project1.html">Project 1</a>
+        <a class="py-2 d-none d-md-inline-block" href="project2.html">Project 2</a>
+        <a class="py-2 d-none d-md-inline-block" href="project3.html">Project 3</a>
+        <a class="py-2 d-none d-md-inline-block" href="project4.html" style="color:white;">Project 4</a>
+        <a class="py-2 d-none d-md-inline-block" href="reading.html">Reading</a>
+      </nav>
+    </header>
+    
+    <main>
+      <body>
+        <img src="Project4/image/hero.jpg" class="img-fluid">
+        <div class="position-relative overflow-hidden p-3 p-md-5 text-center ">
+          <div class="col-md-8 p-lg-5 mx-auto my-5">
+            <p class="display-4 fw-normal mb-5 fw-bold">Space Travel</p>
+            <img class="full" src="Project4/image/1.jpeg">
+            <img class="full" src="Project4/image/2.jpeg">
+            <img class="full" src="Project4/image/3.jpeg">
+            <img class="full" src="Project4/image/4.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">After deciding on the concept, I went online to see if there was something I could refer to, and I found this video tutorial. This tutorial mainly taught me how to code the starfield so I could explore on my own how to use the controls to interact with the system.</p>
+            <img class="full" src="Project4/image/5.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">Then there are the tools for physical programming. Here I used the Photon board.</p>
+            <img class="full" src="Project4/image/6.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">This is the place where I need to think about what types of sensors I need to use and how they interact with my system. This was my first plan for the system: to use pressure sensors, sliding potentiometers, potentiometers, and buttons.</p>
+            <img class="full" src="Project4/image/7.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">However, with the crtis in class, I found the plan was not working with my concept. My goal is to try my best to mimic the real experience of traveling in the space. However, having the user use buttons to change the view of space, or potentiometers to change the color of space, did not make sense. These are not experiences that users can have.</p>
+            <img class="full" src="Project4/image/8.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">So I did another round of inspiration. In sci-fi movies and games, there is always the concept of putting "energy cubes" in the engine to power the system. I thought it was an interesting and reasonable way to play.</p>
+            <img class="full" src="Project4/image/9.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">With the new concept, I modified the controller to have a pressure sensor, a sliding potentiometer, a rotary potentiometer and a gas pedal.</p>
+            <img class="full" src="Project4/image/10.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">I decided to use the pressure sensor to detect if the energy cube is placed in the engine; the gas pedal and rotation potentiometer to control the direction/view of the ship; and the sliding potentiometer to control the speed of the star and simulate redshift to the background.</p>
+            <img class="full" src="Project4/image/11.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">Then I started building my physics board. One of the problems I encountered here was that the accelerometer I got had separate chips and pins. So I soldered the parts together with a soldering iron before using them.</p>
+            <img class="full" src="Project4/image/12.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">Here is the physical board and my code. When coding, I found an effective way to learn coding is to use google wisely. by browsing tutorials, answers in forums, I can get the solution I need in most cases. Also, never being afraid to make mistakes was another thing that helped me learn the functionality of the code.</p>
+            <img class="full" src="Project4/image/13.jpeg">
+            <p class=" text-start py-5 px-5 bg-light">Here's a combination of storyboarding and prototyping.</p>
+            <img class="full" src="Project4/image/14.jpeg">
+            <p class=" text-start py-5 px-5 bg-light"></p>
+            <img class="full" src="Project4/image/storyboard.jpeg">
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                  <img class="full" src="Project4/image/storyboard/1.jpg">
+              </div>
+              <div class="col ps-5">
+                <p class="">One day Tim heard about a universe-themed exhibit at the museum. Since he was interested in the universe, he went to the museum to see the exhibit.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                  <img class="full" src="Project4/image/storyboard/2.jpg">
+              </div>
+              <div class="col ps-5">
+                <p class="">He went into the museum and saw the immersive installation, Space Travel.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                  <img class="full" src="Project4/image/storyboard/3.jpg">
+              </div>
+              <div class="col ps-5">
+                <p class="">He thought it was so cool that he couldn't wait to play with it.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                  <img class="full" src="Project4/image/storyboard/4.jpg">
+              </div>
+              <div class="col ps-5">
+                <p class="">The first screen he saw was that the system was out of energy and he needed to add "energy cubes" to the system.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                  <img class="full" src="Project4/image/storyboard/5.jpg">
+              </div>
+              <div class="col ps-5">
+                <p class="">He put the "energy cube" into the engine and the weight sensor detected the weight and the system was ready to power up.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                <video width=100% controls>
+                <source src="Project4/image/storyboard/6.mov" type=video/ogg>
+              </div>
+              <div class="col ps-5">
+                <p class="">After putting the "energy cube" into the engine, the system is energized.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                  <img class="full" src="Project4/image/storyboard/7.jpg">
+              </div>
+              <div class="col ps-5">
+                <p class="">Then, he could explore the different controls on this console. He first moves the handle, which is the sliding potentiometer. By moving the handle upward, the speed gets faster and faster.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                <video width=100% controls>
+                <source src="Project4/image/storyboard/8.mov" type=video/ogg>
+              </div>
+              <div class="col ps-5">
+                <p class="">If the potentiometer slides upward, the stars will move faster and faster and the red-shift effect will become more and more pronounced. Conversely, the speed will get slower and slower, and the red color will become lighter.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                  <img class="full" src="Project4/image/storyboard/9.jpg">
+              </div>
+              <div class="col ps-5">
+                <p class="">Tim can also rotate the steering wheel to the left or right to see the scene from a different angle to see more of the space.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                <video width=100% controls>
+                <source src="Project4/image/storyboard/10.mov" type=video/ogg>
+              </div>
+              <div class="col ps-5">
+                <p class="">Just like this.</p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+              <div class="col ms-4">
+                  <img class="full" src="Project4/image/storyboard/11.jpg">
+              </div>
+              <div class="col ps-5">
+                <p class="">By playing with the Space Travel, Tim felt happy and fun while learning more about the universe.</p>
+              </div>
+            </div>
+            <img class="full" src="Project4/image/15.jpeg">
+        </div>
+    
+          
+      </body>
+    </html>
