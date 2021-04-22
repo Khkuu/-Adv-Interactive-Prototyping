@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.80.0">
+        <title>Ning Zheng</title>
+    
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        </style>
+
+        <link rel="stylesheet" href="style.css" />
+
+      </head>
+      <body>
+        
+    <header class="sticky-top py-1 nav_header">
+      <nav class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
+        <a class="py-2 d-none d-md-inline-block" href="project1.html">Project 1</a>
+        <a class="py-2 d-none d-md-inline-block" href="project2.html">Project 2</a>
+        <a class="py-2 d-none d-md-inline-block" href="project3.html" style="color:white;">Project 3</a>
+        <a class="py-2 d-none d-md-inline-block" href="project4.html">Project 4</a>
+        <a class="py-2 d-none d-md-inline-block" href="reading.html">Reading</a>
+      </nav>
+    </header>
+    
+    <main>
+      <body>
+        <img src="Project2/Images/hero_section.jpg" class="full">
+        <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
+            <div class="col-md-8 p-lg-5 mx-auto my-5">
+                <p class="display-4 fw-normal mb-5 fw-bold">When is the best time for tea? </p>
+                <p class="text-start mb-3 fw-bold fs-4">Background</p>
+                <p class=" text-start mb-3">I have not been a water drinker since I was a child, but I have recently developed a hobby of drinking tea. Making tea often requires boiling water, so I have to wait a while for the tea to cool to the right temperature before I can drink it. But I always forget the time. Either I don't wait long enough to get burned. Either I waited too long and the tea cooled down and needed to add hot water. At the same time, I want to keep track of how much water I drink every day to urge myself to drink more water. </p>
+                <p class=" text-start mb-5">Therefore, I want to use sensors to help me monitor the temperature of my tea in real time, to remind me when the temperature of my tea is just right and to visualize the amount of water I drink every day.</p>
+                <p class="text-start mb-3 fw-bold fs-4">Controllers</p>
+                <p class="text-start mb-4">For this project, I used those controllers: </p>
+                <div class="row align-items-start mb-5">
+                    <div class="col">
+                    <img class="full mb-4" src="Project3/Image/temperature.jpeg">
+                    <p class="fw-normal fw-bold mb-2">Temperature sensor(DS18B20)</p>
+                    <p class="fw-normal">Capture the temperature of the tea.</p>
+                    </div>
+                    <div class="col">
+                        <img class="full mb-4" src="Project3/Image/pressure.jpeg">
+                        <p class="fw-normal fw-bold mb-2">Pressure sensor(HX711AD)</p>
+                        <p class="fw-normal">Capture the weight of the water.</p>
+                    </div>
+                </div>
+                <p class="text-start mb-3 fw-bold fs-4">How I visualize my data</p>
+                <img class="mx-auto full mb-5" src="Project3/Image/chart.jpg">
+                <p class="text-start mb-3 fw-bold fs-4">How I code the program out</p>
+                <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+                    <div class="col">
+                        <p class="mb-3">I used article.io, HTML and P5JS to code it. This was my first time learning how to use P5JS, so it was a challenge for me.</p>
+                        <p class="mb-3">In order to keep track of my drinking, I needed to save all the data in an array list and make the weight data and temperature data correspond to each other. I had learned how to save data in array lists before in processing, but when it was transferred to P5JS, it had a different feel. And this time I needed to figure out how to relate the weight data to the temperature data at times, so I spent a lot of time looking for tutorials online to see how to do it. This was one of the obstacles I encountered while coding.</p>
+                        <p class="mb-3">Also, the temperature sensor was a problem in this process. This was because the temperature of the water is very difficult to detect. So I map the temperature data in a slightly small range and code a large color range so that the change on the color can be obvious.</p>
+                    </div>
+                    <div class="col ms-4">
+                        <img class="full" src="Project3/Image/code.png">
+                    </div>
+                </div>
+                <p class="text-start mb-3 fw-bold fs-4">Design the physical shape of controllers</p>
+                <p class=" text-start mb-5">Here are some images of my physical board. </p>
+                <div class="row d-flex justify-content-between align-items-center mb-5 mt-5 text-start">
+                    <div class="col">
+                        <img class="full" src="Project3/Image/physical.jpg">
+                    </div>
+                    <div class="col">
+                        <img class="full" src="Project3/Image/detail.jpg">
+                    </div>
+                </div>
+                <p class=" text-start mb-5">For more accurate data, I put the temperature sensor on the pressure sensor. Then a thin-walled glass suitable for thermal conductivity was placed closely next to the temperature sensor. Like the picture on the right above. </p>
+                <p class="text-start mb-3 fw-bold fs-4">Final look </p>
+                <img class="mx-auto full mb-5" src="Project3/Image/use1.jpg">
+                <video width="780" height="400" controls>
+                <source src="Project3/project3_video.mov" type=video/ogg>
+          </div>
+        </div>
+    
+          
+      </body>
+    </html>
